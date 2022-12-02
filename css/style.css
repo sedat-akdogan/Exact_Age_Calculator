@@ -51,8 +51,8 @@ h1 {
 }
 
 .countdown {
-  /* display: flex; */
-  display: none;
+  display: flex;
+  /* display: none; */
   transform: scale(2);
 }
 
@@ -87,8 +87,7 @@ h1 {
   }
 }
 
-input[type="date"], 
-input[type="time"] {
+input[type="date"], input[type="time"] {
     margin-top: 10px;
     width: 200px;
     height: 30px;
