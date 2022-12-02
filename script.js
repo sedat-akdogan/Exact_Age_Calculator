@@ -24,11 +24,14 @@ window.addEventListener("load", () => {
     // seconds.innerHTML = "00";
 
 
-    let H2Elements = document.getElementsByTagName("h2");
-    for (let index = 0; index < H2Elements.length; index++) {
-        H2Elements[index].innerHTML = "00";
-    }
+    // let H2Elements = document.getElementsByTagName("h2");
+    // for (let index = 0; index < H2Elements.length; index++) {
+    //     H2Elements[index].innerHTML = "00";
+    // }
 
-    
-
+    let H2Elements2 = countdown.querySelectorAll("h2");
+    H2Elements2.forEach((element) => {
+        element.innerHTML = "00";
+    });
 });
+
