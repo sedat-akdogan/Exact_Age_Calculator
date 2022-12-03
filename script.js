@@ -100,9 +100,9 @@ const updateCountdown = () => {
   }
   // add values to DOM
   years.innerHTML = yearOfAge.toString().padStart(2, "0");
-  months.innerTML = monthOfAge.toString().padStart(2, "0");
+  months.innerHTML = monthOfAge.toString().padStart(2, "0");
   days.innerHTML = dayOfAge.toString().padStart(2, "0");
   hours.innerHTML = hourOfAge.toString().padStart(2, "0");
-  minutes.innerTML = minuteOfAge.toString().padStart(2, "0");
-  seconds.innerHTL = secondOfAge.toString().padStart(2, "0");
+  minutes.innerHTML = minuteOfAge.toString().padStart(2, "0");
+  seconds.innerHTML = secondOfAge.toString().padStart(2, "0");
 };
