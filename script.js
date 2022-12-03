@@ -34,7 +34,8 @@ window.addEventListener("load", () => {
 });
 
 let selectedBirthday;
-let birthdayInput = document.querySelector("input[name=birthday]");
+//let birthdayInput = document.querySelector("input[name=birthday]");
+let birthdayInput = document.getElementById("birthday");
 birthdayInput.addEventListener("change", (event) => {
   selectedBirthday = new Date(event.target.value);
   if(selectedBirthday > new Date()) {
@@ -42,15 +43,14 @@ birthdayInput.addEventListener("change", (event) => {
     return;
   }
 
-  document.body.style.backgroundImage = 
-  //"url('https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.18ixid-eyJhcHBfawQiojEyMDd9&auto=format&fit=crop&W=13498g-80')";
+  document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.18ixid-eyJhcHBfawQiojEyMDd9&auto=format&fit=crop&W=13498g-80')";
 
   loading.style.display = "block";
   setInterval(updateCountdown, 1000);
   setTimeout(() => {
     loading.style.display = "none";
   }, 1000);
-  
+
 });
 
 const updateCountdown = () => {
