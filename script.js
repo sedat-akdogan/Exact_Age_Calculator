@@ -15,22 +15,23 @@ window.addEventListener("load", () => {
     countdown.style.display = "flex";
   }, 1000);
 
-  years.innerHTML = "00";
-  months.innerHTML = "00";
-  days.innerHTML = "00";
-  hours.innerHTML = "00";
-  minutes.innerHTML = "00";
-  seconds.innerHTML = "00";
+  // years.innerHTML = "00";
+  // months.innerHTML = "00";
+  // days.innerHTML = "00";
+  // hours.innerHTML = "00";
+  // minutes.innerHTML = "00";
+  // seconds.innerHTML = "00";
 
   // let H2Elements = document.getElementsByTagName("h2");
   // for (let index = 0; index < H2Elements.length; index++) {
   //     H2Elements[index].innerHTML = "00";
   // }
 
-  // let H2Elements2 = countdown.querySelectorAll("h2");
-  // H2Elements2.forEach((element) => {
-  //     element.innerHTML = "00";
-  // });
+  let H2Elements2 = countdown.querySelectorAll("h2");
+  H2Elements2.forEach((element) => {
+    element.innerHTML = "00";
+  });
+
 });
 
 let selectedBirthday;
@@ -63,12 +64,12 @@ const updateCountdown = () => {
 
   let now = new Date();
 
-  let currentYear = selectedBirthday.getFullYear();
-  let currentMonth = selectedBirthday.getMonth();
-  let currentDay = selectedBirthday.getDate();
-  let currentHour = selectedBirthday.getHours();
-  let currentMinute = selectedBirthday.getMinutes();
-  let currentSecond = selectedBirthday.getSeconds();
+  let currentYear = now.getFullYear();
+  let currentMonth = now.getMonth();
+  let currentDay = now.getDate();
+  let currentHour = now.getHours();
+  let currentMinute = now.getMinutes();
+  let currentSecond = now.getSeconds();
 
   let yearOfAge = currentYear - dobYear;
   let monthOfAge = currentMonth - dobMonth;
