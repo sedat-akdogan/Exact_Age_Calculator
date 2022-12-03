@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         loading.style.display = "none";
         countdown.style.display = "flex";
-    }, 2000);
+    }, 1000);
 
     // years.innerHTML = "00";
     // months.innerHTML = "00";
@@ -35,3 +35,10 @@ window.addEventListener("load", () => {
     });
 });
 
+let birthdayInput = document.querySelector("input[name=birthday]");
+birthdayInput.addEventListener("change", (event) => {
+    let selectedBirthday = new Date(event.target.value);
+    if (selectedBirthday > new Date()) {
+        alert("Selected birthday is invalid!");
+    }
+});
